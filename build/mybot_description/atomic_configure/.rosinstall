@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/zhou/mybot_ws/devel/.private/mybot_description/setup.sh

@@ -1,0 +1,373 @@
+<?xml version="1.0" ?>
+<robot name="truck">
+<link name="at_volvo__chassis">
+    <inertial>
+      <mass value="2300.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="937.5" ixy="0.0" ixz="0.0" iyy="8520.8" iyz="0.0" izz="9083.3"/>
+    </inertial>
+    <collision name="at_volvo__collision">
+      <origin rpy="0  0  0" xyz="0  0  1"/>
+      <geometry>
+        <box size="5.250 2.495 0.4"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__visual">
+      <origin rpy="0  0  0" xyz="0  0  1"/>
+      <geometry>
+        <box size="5.250 2.495 0.4"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__cabinet">
+    <inertial>
+      <mass value="1000.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="937.5" ixy="0.0" ixz="0.0" iyy="8520.8" iyz="0.0" izz="9083.3"/>
+    </inertial>
+    <collision name="at_volvo__collision">
+      <origin rpy="0  0  0" xyz="-1.5  0  -3"/>
+      <geometry>
+        <box size="2.375 2.495 3.353"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__visual">
+      <origin rpy="0  0  0" xyz="-1.5  0  -3"/>
+      <geometry>
+        <box size="2.375 2.495 3.353"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__trailer">
+    <inertial>
+      <mass value="2300.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="937.5" ixy="0.0" ixz="0.0" iyy="8520.8" iyz="0.0" izz="9083.3"/>
+    </inertial>
+    <collision name="at_volvo__collision">
+      <origin rpy="0  0  0" xyz="5.75  0   -1"/>
+      <geometry>
+        <box size="6. 2.495 0.2"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__visual">
+      <origin rpy="0  0  0" xyz="5.75  0   -1"/>
+      <geometry>
+        <box size="6. 2.495 0.2"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__front_left_wheel">
+    <inertial>
+      <mass value="100.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="6.5" ixy="0.0" ixz="0.0" iyy="6.5" iyz="0.0" izz="12.25"/>
+    </inertial>
+    <collision name="at_volvo__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__front_right_wheel">
+    <inertial>
+      <mass value="100.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="6.5" ixy="0.0" ixz="0.0" iyy="6.5" iyz="0.0" izz="12.25"/>
+    </inertial>
+    <collision name="at_volvo__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__rear_left_wheel">
+    <inertial>
+      <mass value="100.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="6.5" ixy="0.0" ixz="0.0" iyy="6.5" iyz="0.0" izz="12.25"/>
+    </inertial>
+    <collision name="at_volvo__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__rear_right_wheel">
+    <inertial>
+      <mass value="100.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="6.5" ixy="0.0" ixz="0.0" iyy="6.5" iyz="0.0" izz="12.25"/>
+    </inertial>
+    <collision name="at_volvo__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__trailer_left_wheel">
+    <inertial>
+      <mass value="100.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="6.5" ixy="0.0" ixz="0.0" iyy="6.5" iyz="0.0" izz="12.25"/>
+    </inertial>
+    <collision name="at_volvo__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__trailer_right_wheel">
+    <inertial>
+      <mass value="100.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="6.5" ixy="0.0" ixz="0.0" iyy="6.5" iyz="0.0" izz="12.25"/>
+    </inertial>
+    <collision name="at_volvo__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__trailer_left_wheel_2">
+    <inertial>
+      <mass value="100.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="6.5" ixy="0.0" ixz="0.0" iyy="6.5" iyz="0.0" izz="12.25"/>
+    </inertial>
+    <collision name="at_volvo__collision">
+      <origin rpy="0      1.5707  1.5707" xyz="-7.3    1.2    0.882"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__visual">
+      <origin rpy="0      1.5707  1.5707" xyz="-7.3    1.2    0.882"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__trailer_right_wheel_2">
+    <inertial>
+      <mass value="100.0"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="6.5" ixy="0.0" ixz="0.0" iyy="6.5" iyz="0.0" izz="12.25"/>
+    </inertial>
+    <collision name="at_volvo__collision">
+      <origin rpy="0      1.5707  1.5707" xyz="-7.3   -1.2    0.882"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__visual">
+      <origin rpy="0      1.5707  1.5707" xyz="-7.3   -1.2    0.882"/>
+      <geometry>
+        <cylinder length="0.3" radius="0.882"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__front_lidar__link">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision name="at_volvo__front_lidar__collision-base">
+      <origin rpy="0  0  0" xyz="0      0     -0.0145"/>
+      <geometry>
+        <box size="0.05 0.05 0.041"/>
+      </geometry>
+    </collision>
+    <collision name="at_volvo__front_lidar__collision-top">
+      <origin rpy="0  0  0" xyz="0      0      0.0205"/>
+      <geometry>
+        <cylinder length="0.029" radius="0.021"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__front_lidar__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/meshes/hokuyo.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__rear_lidar__link">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+    <collision name="at_volvo__rear_lidar__collision-base">
+      <origin rpy="0  0  0" xyz="0      0     -0.0145"/>
+      <geometry>
+        <box size="0.05 0.05 0.041"/>
+      </geometry>
+    </collision>
+    <collision name="at_volvo__rear_lidar__collision-top">
+      <origin rpy="0  0  0" xyz="0      0      0.0205"/>
+      <geometry>
+        <cylinder length="0.029" radius="0.021"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__rear_lidar__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://PATHTOMESHES/meshes/hokuyo.dae" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="at_volvo__front_camera__link">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.000166667" ixy="0" ixz="0" iyy="0.000166667" iyz="0" izz="0.000166667"/>
+    </inertial>
+    <collision name="at_volvo__front_camera__collision">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+    <visual name="at_volvo__front_camera__visual">
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="at_volvo__trailer_left_wheel_hinge" type="fixed">
+    <parent link="at_volvo__trailer"/>
+    <child link="at_volvo__trailer_left_wheel"/>
+    <origin rpy="0      1.5707  1.5707" xyz="5.5    1.2   -1.118"/>
+    <axis xyz="9.00000000e-05   9.00000000e-05   1.00000000e+00"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="at_volvo__trailer_right_wheel_hinge" type="fixed">
+    <parent link="at_volvo__trailer"/>
+    <child link="at_volvo__trailer_right_wheel"/>
+    <origin rpy="0      1.5707  1.5707" xyz="5.5   -1.2   -1.118"/>
+    <axis xyz="9.00000000e-05   9.00000000e-05   1.00000000e+00"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="at_volvo__trailer_left_wheel_hinge_2" type="fixed">
+    <parent link="at_volvo__trailer"/>
+    <child link="at_volvo__trailer_left_wheel"/>
+    <origin rpy="0      1.5707  1.5707" xyz="5.5    1.2   -1.118"/>
+    <axis xyz="9.00000000e-05   9.00000000e-05   1.00000000e+00"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="at_volvo__trailer_right_wheel_hinge_2" type="fixed">
+    <parent link="at_volvo__trailer"/>
+    <child link="at_volvo__trailer_right_wheel"/>
+    <origin rpy="0      1.5707  1.5707" xyz="5.5   -1.2   -1.118"/>
+    <axis xyz="9.00000000e-05   9.00000000e-05   1.00000000e+00"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="at_volvo__front_left_wheel_hinge" type="fixed">
+    <parent link="at_volvo__chassis"/>
+    <child link="at_volvo__front_left_wheel"/>
+    <origin rpy="0      1.5707  1.5707" xyz="1      1.2475  0.882"/>
+    <axis xyz="9.00000000e-05   9.00000000e-05   1.00000000e+00"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="at_volvo__front_right_wheel_hinge" type="fixed">
+    <parent link="at_volvo__chassis"/>
+    <child link="at_volvo__front_right_wheel"/>
+    <origin rpy="0      1.5707  1.5707" xyz="1     -1.2475  0.882"/>
+    <axis xyz="9.00000000e-05   9.00000000e-05   1.00000000e+00"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="at_volvo__rear_left_wheel_hinge" type="fixed">
+    <parent link="at_volvo__chassis"/>
+    <child link="at_volvo__rear_left_wheel"/>
+    <origin rpy="0      1.5707  1.5707" xyz="-2      1.2475  0.882"/>
+    <axis xyz="9.00000000e-05   9.00000000e-05   1.00000000e+00"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="at_volvo__rear_right_wheel_hinge" type="fixed">
+    <parent link="at_volvo__chassis"/>
+    <child link="at_volvo__rear_right_wheel"/>
+    <origin rpy="0      1.5707  1.5707" xyz="-2     -1.2475  0.882"/>
+    <axis xyz="9.00000000e-05   9.00000000e-05   1.00000000e+00"/>
+    <limit effort="0" lower="0" upper="0" velocity="0"/>
+  </joint>
+  <joint name="at_volvo__main_cabinet_hinge" type="fixed">
+    <parent link="at_volvo__chassis"/>
+    <child link="at_volvo__cabinet"/>
+    <origin rpy="0  0  0" xyz="3    0    5.75"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="at_volvo__trailer_cabinet_hinge" type="fixed">
+    <parent link="at_volvo__chassis"/>
+    <child link="at_volvo__trailer"/>
+    <origin rpy="0  0  0" xyz="-11   0   2"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="at_volvo__front_lidar_joint" type="fixed">
+    <parent link="at_volvo__chassis"/>
+    <child link="at_volvo__front_lidar__link"/>
+    <origin rpy="0  0  0" xyz="2.75     0       1.03499"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="at_volvo__rear_lidar_joint" type="fixed">
+    <parent link="at_volvo__trailer"/>
+    <child link="at_volvo__rear_lidar__link"/>
+    <origin rpy="0  0  3" xyz="2.7    0    -0.965"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="at_volvo__front_camera" type="fixed">
+    <parent link="at_volvo__cabinet"/>
+    <child link="at_volvo__front_camera__link"/>
+    <origin rpy="0  0  0" xyz="-0.25  0   -1.7"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  
+</robot>

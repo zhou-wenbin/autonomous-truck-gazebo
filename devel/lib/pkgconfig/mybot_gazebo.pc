@@ -1,0 +1,1 @@
+/home/zhou/mybot_ws/devel/.private/mybot_gazebo/lib/pkgconfig/mybot_gazebo.pc

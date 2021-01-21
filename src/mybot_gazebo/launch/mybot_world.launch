@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <arg name="world" default="empty"/> 
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+<!-- Camera topic and weights, config and classes files -->
+<!--  <arg name="image_topic"	                default="/arm_sensor/camera/image_raw"/>-->
+<!--  <arg name="weights_name"	            default="yolov3.weights"/>-->
+<!--  <arg name="config_name"	                default="yolov3-cai-tiny.cfg"/>-->
+<!--  <arg name="classes_name"	            default="screw.names"/>-->
+
+<!-- Published topics -->
+<!--<arg name="publish_image"	            default="true"/>-->
+<!--<arg name="detected_objects_topic"      default="detected_objects_in_image"/>-->
+<!--<arg name="detections_image_topic"      default="detections_image_topic"/>-->
+
+<!-- Detection confidence -->
+<!--<arg name="confidence"                  default="0.6"/>-->
+
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+<!--    <arg name="world_name" value="$(find mybot_gazebo)/worlds/mybot.world"/>-->
+<!--    <arg name="world_name" value="$(find mybot_gazebo)/worlds/turtlebot_playground.world"/>-->
+<!--    <arg name="world_name" value="$(find mybot_gazebo)/worlds/harbour_easy.world"/>-->
+<!--    <arg name="world_name" value="$(find mybot_gazebo)/worlds/factory.world"/>-->
+<!--    <arg name="world_name" value="$(find mybot_gazebo)/worlds/test_factory3.world"/>-->
+    <arg name="world_name" value="$(find mybot_gazebo)/worlds/factory7.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  
+<!--  <param name="robot_description" command="$(find xacro)/xacro.py '$(find mybot_description)/urdf/truck.urdf.xacro'"/>-->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find mybot_description)/urdf/mybot1.xacro'"/>
+
+  <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -param robot_description -model mybot" />
+
+</launch>
+
+
+<!--the following is to show the truck on gazebo-->
+<!--<launch>-->
+<!--  <arg name="paused" default="false"/>-->
+<!--  <arg name="debug" default="false"/>-->
+<!--  <arg name="gui" default="true"  />-->
+<!--  <arg name="headless" default="false"/>-->
+
+
+<!--  <include file="$(find jsk_mbzirc_common)/launch/mbzirc_arena.launch" >-->
+<!--    <arg name="paused" default="$(arg paused)"/>-->
+<!--    <arg name="debug" default="$(arg debug)"/>-->
+<!--    <arg name="gui" default="$(arg gui)"  />-->
+<!--    <arg name="world_name" default="$(find jsk_mbzirc_common)/gazebo_model/world/mbzirc_arena_task_1.world"/>-->
+<!--    <arg name="headless" default="$(arg headless)"/>-->
+<!--  </include>-->
+
+<!--  <param name="truck/robot_description" command="$(find xacro)/xacro '$(find jsk_mbzirc_common)/urdf/truck.urdf.xacro'" />-->
+
+<!--  <group ns="truck/ground_truth">-->
+<!--    <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"-->
+<!--          args=" -urdf -model truck -param /truck/robot_description" />-->
+
+<!--    <node pkg="fake_localization" type="fake_localization" name="fake_localization" output="screen" >-->
+<!--      <remap from="base_pose_ground_truth" to="/truck/ground_truth/odom"/>-->
+<!--      <param name="global_frame_id " value="/world"/>-->
+<!--      <param name="base_frame_id"    value="/truck/ground_truth/base_link"/>-->
+<!--      <param name="odom_frame_id"    value="/truck/ground_truth/base_link"/>-->
+<!--    </node>-->
+
+<!--    <node pkg="robot_state_publisher" type="robot_state_publisher" name="trcuk_state_publisher" output="screen" >-->
+<!--      <param name="tf_prefix" type="string" value="truck/ground_truth" />-->
+<!--      <param name="publish_frequency" type="double" value="50.0" />-->
+<!--    </node>-->
+<!--  </group>-->
+
+<!--</launch>-->
