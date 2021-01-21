@@ -1,6 +1,0 @@
-devel_space: /home/zhou/mybot_ws/devel
-install: false
-install_space: /home/zhou/mybot_ws/install
-profile: default
-source_space: /home/zhou/mybot_ws/src
-workspace: /home/zhou/mybot_ws
